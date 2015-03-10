@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello ZingChart World</title>
+    <script src="zingchart.min.js"></script>
+    <script>
+      var myChart=
+      {
+        "type": "pie3d",
+        "plot":{
+          "slice":45
+        },
+        "plotarea":{
+          "margin-top":"35px"
+        },
+        "title":{
+          "text":"Total movies rated based on genres"
+        },
+        "series": [
+        {
+          'text': 'Drama',
+          'values': [1603]
+        },
+        {'text': 'Comedy', 'values': [1200]},
+        {'text': 'Action', 'values': [503]},
+        {'text': 'Thriller', 'values': [492]},
+        {'text': 'Romance', 'values': [471]},
+        {'text': 'Horror', 'values': [343]},
+        {'text': 'Adventure', 'values': [283]},
+        {'text': 'Sci-Fi', 'values': [276]},
+        {'text': "Children's", 'values': [251]},
+        {'text': 'Crime', 'values': [211]},
+        {'text': 'War', 'values': [143]},
+        {'text': 'Documentary', 'values': [127]},
+        {'text': 'Musical', 'values': [114]},
+        {'text': 'Mystery', 'values': [106]},
+        {'text': 'Animation', 'values': [105]},
+        {'text': 'Western', 'values': [68]},
+        {'text': 'Fantasy', 'values': [68]},
+        {'text': 'Film-Noir', 'values': [44]}]
+      };
+      window.onload=function(){
+        zingchart.render({
+          id:"myChartDiv",
+          data:myChart,
+          height:400,
+          width:"100%"
+        });
+      };
+    </script>
+  </head>
+  <body> 
+    <div id="myChartDiv"></div>
+  </body>
+</html>

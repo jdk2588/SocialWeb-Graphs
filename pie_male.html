@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello ZingChart World</title>
+    <script src="zingchart.min.js"></script>
+    <script>
+      var myChart=
+      {
+        "type": "pie3d",
+        "plot":{
+          "slice":45
+        },
+        "plotarea":{
+          "margin-top":"35px"
+        },
+        "title":{
+          "text":"Total movies rated based on genres by Male users above 56+ (in %)"
+        },
+        "series":[{'text': 'Drama(22.94)', 'values': [22.94]},
+         {'text': 'Comedy(17.53)', 'values': [17.53]},
+          {'text': 'Action(9.07)', 'values': [9.07]},
+           {'text': 'Thriller(8.44)', 'values': [8.44]},
+            {'text': 'Romance(7.41)', 'values': [7.41]},
+             {'text': 'Sci-Fi(4.99)', 'values': [4.99]},
+              {'text': 'Adventure(4.99)', 'values': [4.99]},
+               {'text': 'Horror(4.6)', 'values': [4.6]},
+                {'text': "Children's(3.92)", 'values': [3.92]},
+                 {'text': 'Crime(3.53)', 'values': [3.53]},
+                  {'text': 'War(2.58)', 'values': [2.58]},
+                   {'text': 'Musical(2.04)', 'values': [2.04]},
+                    {'text': 'Mystery(1.86)', 'values': [1.86]},
+                     {'text': 'Animation(1.74)', 'values': [1.74]},
+                      {'text': 'Western(1.23)', 'values': [1.23]},
+                       {'text': 'Fantasy(1.23)', 'values': [1.23]},
+                        {'text': 'Documentary(1.15)', 'values': [1.15]},
+                         {'text': 'Film-Noir(0.75)', 'values': [0.75]}]
+      };
+      window.onload=function(){
+        zingchart.render({
+          id:"myChartDiv",
+          data:myChart,
+          height:400,
+          width:"100%"
+        });
+      };
+    </script>
+  </head>
+  <body> 
+    <div id="myChartDiv"></div>
+  </body>
+</html>
