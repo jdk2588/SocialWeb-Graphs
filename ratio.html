@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello ZingChart World</title>
+    <script src="zingchart.min.js"></script>
+    <script>
+      var myChart=
+      {
+        "type": "bar",
+        "stacked":true,
+        "stack-type":"normal",
+        "title":{
+          "text":"Ratio of ratings per age group for gender."
+        },
+        "scale-y":{
+
+          "label":{
+            "text":"Ratings"
+          },
+            "short": true,
+            "short-unit":"K",
+            "values": "0:400000:12500"
+        },
+        "scale-x":{
+          "values":["Under 18","18-24","25-34","35-44","45-49", "50-55", "56+"],
+          "label" :{
+              "text":"Age Groups"
+          }
+        },
+        "legend":{
+          "layout": "float",
+          "draggable":true,
+                "drag-handler":"icon",
+          "backgroundColor":"#bdc3c7",
+          "alpha":1,
+          "borderWidth":0,
+          "shadow":false,
+          "chart" : {
+                "marginRight" : 100
+          },
+        },
+        "series": [
+        {
+          "values":[18384, 138109, 304216, 149350, 59523, 54426, 29581],
+          "stack":1,
+          "text": "Male"
+        },
+        
+        {
+          "values":[8827, 45427, 91340, 49473, 24110, 18064, 9199],
+          "stack":1,
+          "text": "Female"
+        }
+        ]
+      };
+      window.onload=function(){
+        zingchart.render({
+          id:"myChartDiv",
+          data:myChart,
+          height:400,
+          width:"100%"
+        });
+      };
+    </script>
+  </head>
+  <body> 
+    <div id="myChartDiv"></div>
+  </body>
+</html>
